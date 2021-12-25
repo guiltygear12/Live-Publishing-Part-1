@@ -1,0 +1,36 @@
+html{
+    font-size: 10px;
+    font-family: "noto sans kr";
+}
+.dropdown{
+    width: 200px;
+}
+.dropdown-btn{
+    width: inherit;
+    padding: 10px;
+    font-size: 1.6rem;
+    font-weight: 500;
+    border: none;
+    background-color: beige;
+    cursor: pointer;
+}
+.dropdown:hover .dropdown-submenu{
+    display: block;
+}
+.dropdown-submenu{
+    width: inherit;
+    display: none;
+}
+.dropdown-submenu a{
+    display: block;
+    padding: 5px;
+    font-size: 1.2rem;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    transition: .3s;
+}
+.dropdown-submenu a:hover{
+    background-color: #ddd;
+    font-size: 1.4rem;
+}

@@ -1,0 +1,37 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    width: 400px;
+    height: 400px;
+    position: relative;
+}
+.item{
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+.item:nth-child(1){
+    background-color: red;
+    top: 0;
+    left: 0;
+    animation: loading 1.2s infinite;
+}
+.item:nth-child(2){
+    background-color: aqua;
+    top: 0;
+    left: 0;
+    animation: loading 1.2s infinite;
+    animation-delay: .6s;
+}
+@keyframes loading{
+    0%{top: 0%;left: 0%; background-color: aqua;}
+    25%{top: 0%;left: calc(100% - 100px); background-color: blue;}
+    50%{top: calc(100% - 100px);left: calc(100% - 100px); background-color: darkblue;}
+    75%{top: calc(100% - 100px);left: 0%; background-color: blueviolet}
+    100%{top: 0%;left: 0%; background-color: aqua;}
+}

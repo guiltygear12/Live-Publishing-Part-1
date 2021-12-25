@@ -1,0 +1,49 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+body {
+  font-family: 'Raleway','메이플스토리 ', sans-serif;
+  line-height: 1.5em;
+  margin: 0;
+  font-weight: 300;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  flex-direction: column;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+.gnb{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 10px;
+}
+.gnb a{}
+.gnb a::before{
+    content: '01';
+    background-color: royalblue;
+    color: #eee;
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    text-align: center;
+    line-height: 20px;
+    border-radius: 50%;
+    margin-right: 5px;
+    font-size: 12px;
+}
+.gnb a::after{
+    content: 'update';
+    font-size: 12px;
+    background-color: rgb(255, 34, 34);
+    color: #eee;
+    margin-left: 5px;
+    padding: 2px;
+    border-radius: .5em;
+}
