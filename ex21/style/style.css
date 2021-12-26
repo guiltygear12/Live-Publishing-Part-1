@@ -32,7 +32,12 @@ input[name=tabmenu]{
   display: none;
 }
 .content{
-  display: none;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0%;
+  transition: .5s;
+  visibility: hidden;
 }
 .btn{
   position: absolute;
@@ -50,13 +55,16 @@ input[name=tabmenu]{
   cursor: pointer;
 }
 input[id=tab1]:checked~.slide1{
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 input[id=tab2]:checked~.slide2{
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 input[id=tab3]:checked~.slide3{
-  display: block;
+  opacity: 1;
+  visibility: visible;
 }
 input[id=tab1]:checked~.btn label[for=tab1]{
   background-color: crimson;
