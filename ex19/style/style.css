@@ -1,0 +1,70 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  font-family: '메이플스토리', sans-serif;
+  margin: 0;
+  color: #222;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+.container{}
+input[id=trigger]{
+  display: none;
+}
+label[for=trigger]{
+  /* border: 1px solid red; */
+  width: 40px;
+  height: 30px;
+  display: block;
+  position: absolute;
+  cursor: pointer;
+  right:  10px;
+  top: 50%;
+  transform: translateY(-50%);
+  transition: .3s;
+}
+label[for=trigger] span{
+  position: absolute;
+  height: 2px;
+  width: 100%;
+  background-color: #222;
+  left: 0;
+  transition: .3s;
+}
+label[for=trigger] span:nth-child(1){
+  top: 0;
+}
+label[for=trigger] span:nth-child(2){
+  top:50%;
+}
+label[for=trigger] span:nth-child(3){
+  top:100%;
+}
+.sidebar{
+  background-color: #222;
+  width: 300px;
+  height: 80vh;
+  position:absolute;
+  position: fixed;
+  right: -300px;
+  transition: .3s;
+}
+
+input[id=trigger]:checked + label[for=trigger] span:nth-child(1){transform: rotate(45deg);top: 50%;}
+input[id=trigger]:checked + label[for=trigger] span:nth-child(2){ opacity: 0;}
+input[id=trigger]:checked + label[for=trigger] span:nth-child(3){
+  transform: rotate(-45deg);
+  top: 50%;
+}
+input[id=trigger]:checked + label[for=trigger]{
+  right: 310px;
+}
+input[id=trigger]:checked ~ .sidebar{
+  right: 0;
+}
