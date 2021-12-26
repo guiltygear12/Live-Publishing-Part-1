@@ -1,0 +1,85 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  font-family: '메이플스토리', sans-serif;
+  margin: 0;
+  color: #222;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+.gallery{
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  height: 100vh;
+}
+.gallery li{
+  border: 5px solid #000;
+  flex: 1;
+  transition: .5s;
+  position: relative;
+  overflow: hidden;
+}
+.gallery li:last-child{
+  border-right: none;
+}
+.gallery li:nth-child(1){
+  background: url("../img/니나브.jpg") no-repeat 40% center;
+}
+.gallery li:nth-child(2){
+  background: url("../img/라하르트.jpg") no-repeat 30% center;
+}
+.gallery li:nth-child(3){
+  background: url("../img/실리안전투.jpg") no-repeat 40% center;
+}
+.gallery li:nth-child(4){
+  background: url("../img/아브렐슈드.jpg") no-repeat center center;
+}
+.gallery li:nth-child(5){
+  background: url("../img/에아달린.jpg") no-repeat center center;
+}
+.gallery:hover li{
+  flex: 1;
+  filter: grayscale(1);
+}
+.gallery li:hover{
+  flex: 3;
+  filter: none;
+}
+.content{
+  position: absolute;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  bottom: -350px;
+  height: 250px;
+  transition: .5s;
+  padding: 20px;
+  box-sizing: border-box;
+  padding-top: 40px;
+}
+.gallery li:hover .content{
+  bottom: 0;
+  transition-delay: .3s;
+}
+.sns a{
+  color: #666;
+}
+.content::before{
+  content: '';
+  position: absolute;
+  background-color: #222;
+  width: 100%;
+  height: 80px;
+  left: 0;
+  top: -30px;
+  transform-origin: left bottom;
+  transform: rotate(-3deg) scale(1.3);
+}
