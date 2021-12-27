@@ -1,0 +1,90 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  font-family: '메이플스토리', sans-serif;
+  margin: 0;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+.tab-inner{
+  height: 510px;
+}
+.tab-inner h1{
+  text-align: center;
+}
+input[name=tabmenu]{
+  display: none;
+}
+.tabs{
+  width: 800px;
+  height: 400px;
+  position: relative;
+  overflow: hidden;
+}
+.items{
+  width: calc(800px * 3);
+  height: 400px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: .3s;
+}
+.items div{
+  width: 800px;
+  height: 400px;
+  float: left;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 50px;
+}
+.btn{
+  text-align: center;
+}
+.btn label{
+  width: 10px;
+  height: 10px;
+  background-color: lightgray;
+  border-radius: 0%;
+  display: inline-block;
+  transition: .3s;
+}
+.items div img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  
+}
+.items div p b{
+  display: block;
+}
+.items div p span{
+  color: orange;
+}
+
+input[id=tab1]:checked ~ .tabs .items{
+  left: calc(800px * -0);
+}
+input[id=tab2]:checked ~ .tabs .items{
+  left: calc(800px * -1);
+}
+input[id=tab3]:checked ~ .tabs .items{
+  left: calc(800px * -2);
+}
+input[id=tab1]:checked ~ .btn label[for=tab1],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab3]:checked ~ .btn label[for=tab3]{
+  border-radius: 50%;
+  background-color: crimson;
+}
