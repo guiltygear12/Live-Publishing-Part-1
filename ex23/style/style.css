@@ -1,0 +1,72 @@
+/* Google Web Font */
+@import url('https://fonts.googleapis.com/css?family=Raleway&display=swap');
+
+/* Fontawesome 4.7 */
+@import url('https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css');
+
+body {
+  font-family: '메이플스토리', sans-serif;
+  margin: 0;
+  color: #222;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+}
+a {
+  text-decoration: none;
+  color: #222;
+}
+.tab-inner{
+  border: 1px solid red;
+  width: 1280px;
+  height: 760px;
+  
+}
+input[name=tabmenu]{
+  display: none;
+}
+.slide {
+  position: relative;
+  width: 1280px;
+  height: 720px;
+  overflow: hidden;
+}
+.slide-inner {
+  position: absolute;
+  width: calc(1280px * 3);
+  font-size: 0;
+  top: 0;
+  left: 0;
+  transition: .3s;
+}
+.slide-inner a img {
+  width: 1280px;
+  height: 720px;
+}
+.btn{
+  text-align: center;
+  margin-top: 5px;
+}
+.btn label{
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #ccc;
+  border-radius: 50%;
+}
+input[id=tab1]:checked ~ .slide .slide-inner{
+  left:calc(1280px * 0);
+}
+input[id=tab2]:checked ~ .slide .slide-inner{
+  left:calc(1280px * -1);
+}
+input[id=tab3]:checked ~ .slide .slide-inner{
+  left:calc(1280px * -2);
+}
+input[id=tab3]:checked ~ .btn label[for=tab3],
+input[id=tab2]:checked ~ .btn label[for=tab2],
+input[id=tab1]:checked ~ .btn label[for=tab1]{
+  background-color: crimson;
+}
